@@ -8,9 +8,9 @@ services:
     ports:
       - "7878:7878"
     environment:
-      - PUID=1000  # Replace with your user ID
-      - PGID=1000  # Replace with your group ID
-      - TZ=America/Chicago  # Set timezone to America/Chicago
+      - PUID=$PUID  # Replace with your user ID
+      - PGID=$PGID  # Replace with your group ID
+      - TZ=$TZ  # Set timezone to America/Chicago
     volumes:
       - /opt/docker/stack/media/radarr/config:/config
       #- /movies:/movies
