@@ -7,22 +7,11 @@ services:
       - PUID=1000
       - PGID=3000
       - TZ=America/Chicago 
-    env_file:
-      - path: ./stack.env
-        required: false
-      - path: ../../../stack.env
-        required: false
-      - path: ../../stack.env
-        required: false
-      - path: ../stack.env
-        required: false
-      - path: ./.env
-        required: false
     volumes:
-      - ${PATH_AUDIOBOOOKS}:/audiobooks
-    #  - </path/to/podcasts>:/podcasts
-    #  - </path/to/config>:/config
-    #  - </path/to/metadata>:/metadata
+      - /mnt/storage/share/audiobook:/mnt/remote_nfs/audiobook
+      - /mnt/storage/share/postcast:/podcasts
+      - /mnt/container/appfs/audiobookshelf/config:/config
+      - /mnt/container/appfs/audiobookshelf/metadata:/metadata
     ports:
-      - 13379:80
+      - 13378:80
     restart: unless-stopped
