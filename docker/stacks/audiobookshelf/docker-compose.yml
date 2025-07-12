@@ -8,7 +8,10 @@ services:
       - PGID=3000
       - TZ=America/Chicago 
     env_file:
-      - stack.env
+      - path: ./stack.env
+        required: false
+      - path: ./.env
+        required: false
     volumes:
       - ${PATH_AUDIOBOOOKS}:/audiobooks
     #  - </path/to/podcasts>:/podcasts
