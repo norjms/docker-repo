@@ -10,7 +10,7 @@ services:
     env_file:
       - ./audiobookshelf.env
     volumes:
-      - ${PATH-AUDIOBOOOKS}:/audiobooks
+      - ${PATH_AUDIOBOOOKS}:/audiobooks
     #  - </path/to/podcasts>:/podcasts
     #  - </path/to/config>:/config
     #  - </path/to/metadata>:/metadata
