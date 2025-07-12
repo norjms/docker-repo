@@ -10,6 +10,12 @@ services:
     env_file:
       - path: ./stack.env
         required: false
+      - path: ../../../stack.env
+        required: false
+      - path: ../../stack.env
+        required: false
+      - path: ../stack.env
+        required: false
       - path: ./.env
         required: false
     volumes:
