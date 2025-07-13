@@ -1,0 +1,18 @@
+version: '0.1'
+services:
+  unpackerr:
+    image: golift/unpackerr
+    container_name: unpackerr
+    user: 1000:3000
+    environment:
+      - TZ=America/Chicago
+      - UN_LOG_FILE=/downloads/qbittorrent/unpackerr.log
+      #- UN_SONARR_0_URL=http://sonarr:8989
+      #- UN_SONARR_0_API_KEY=32coolcatcharacters
+      - UN_RADARR_0_URL=https://movie.nnlink.org
+      - UN_RADARR_0_API_KEY=bb086d8675a6458f91f1da474deb1445
+      - UN_RADARR_1_URL=https://movie4k.nnlink.org
+      - UN_RADARR_1_API_KEY=c9feb3400eaf46018acad4f64f32546a
+    volumes:
+      - /mnt/storage/downloads:/downloads
+    restart: unless-stopped
