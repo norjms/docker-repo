@@ -8,9 +8,9 @@ services:
       - PGID=3000
       - TZ=America/Chicago
     volumes:
-      - /path/to/radarr/data:/config
-      - /path/to/movies:/movies #optional
-      - /path/to/download-client-downloads:/downloads #optional
+      - /mnt/container/appfs/radarr:/config
+      - /mnt/storage/share/movie:/movie 
+      - /mnt/storage/downloads:/downloads 
     ports:
       - 7878:7878
     restart: unless-stopped
