@@ -12,5 +12,5 @@ services:
       - /mnt/storage/share/tv4k:/tv
       - /mnt/storage/downloads:/downloads 
     ports:
-      - 8989:8989
+      - 8990:8989
     restart: unless-stopped
