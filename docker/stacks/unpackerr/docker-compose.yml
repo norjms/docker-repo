@@ -12,7 +12,7 @@ services:
       - UN_RADARR_0_URL=https://movie.nnlink.org
       - UN_RADARR_0_API_KEY=${RADARRAPI}
       - UN_RADARR_1_URL=https://movie4k.nnlink.org
-      - UN_RADARR_1_API_KEY=${RADARR4K}
+      - UN_RADARR_1_API_KEY=${RADARR4KAPI}
     volumes:
       - /mnt/storage/downloads:/downloads
     restart: unless-stopped
