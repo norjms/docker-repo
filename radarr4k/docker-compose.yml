@@ -1,16 +1,16 @@
 version: '0.1'
 services:
-  radarr:
+  radarr4k:
     image: lscr.io/linuxserver/radarr:latest
-    container_name: radarr
+    container_name: radarr4k
     environment:
       - PUID=1000
       - PGID=3000
       - TZ=America/Chicago
     volumes:
-      - /mnt/container/appfs/radarr:/config
-      - /mnt/storage/share/movie:/movie 
+      - /mnt/container/appfs/radarr4k:/config
+      - /mnt/storage/share/4K_Movies:/movie 
       - /mnt/storage/downloads:/downloads 
     ports:
-      - 7878:7878
+      - 7879:7878
     restart: unless-stopped
