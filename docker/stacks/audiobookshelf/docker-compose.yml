@@ -8,7 +8,7 @@ services:
       - PGID=3000
       - TZ=America/Chicago 
     volumes:
-      - /mnt/storage/share/audiobook:/mnt/remote_nfs/audiobook
+      - /mnt/storage/share/audiobook:/audiobook
       - /mnt/storage/share/postcast:/podcasts
       - /mnt/container/appfs/audiobookshelf/config:/config
       - /mnt/container/appfs/audiobookshelf/metadata:/metadata
