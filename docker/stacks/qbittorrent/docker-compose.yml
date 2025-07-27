@@ -8,12 +8,12 @@ services:
       - PGID=3000
       - TZ=America/Chicago
       - WEBUI_PORT=18080
-      - TORRENTING_PORT=6881
+      - TORRENTING_PORT=25891
     volumes:
       - /mnt/container/appfs/qbittorrent:/config
       - /mnt/storage/downloads:/downloads
     ports:
       - 18080:18080
-      - 6881:6881
-      - 6881:6881/udp
+      - 25891:25891
+      - 25891:25891/udp
     restart: unless-stopped
