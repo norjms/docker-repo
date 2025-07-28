@@ -4,11 +4,11 @@ services:
     image: ghcr.io/advplyr/audiobookshelf:latest
     container_name: audiobookshelf
     environment:
-      - PUID=1000
-      - PGID=3000
+      - PUID=0
+      - PGID=0
       - TZ=America/Chicago 
     volumes:
-      - /mnt/storage/share/audiobook:/audiobook:rw
+      - /mnt/storage/share/audiobook:/audiobook
       - /mnt/storage/share/postcast:/podcasts
       - /mnt/container/appfs/audiobookshelf/config:/config
       - /mnt/container/appfs/audiobookshelf/metadata:/metadata
