@@ -4,8 +4,8 @@ services:
     image: ghcr.io/advplyr/audiobookshelf:latest
     container_name: audiobookshelf
     environment:
-      - PUID=0
-      - PGID=0
+      - PUID=568
+      - PGID=568
       - TZ=America/Chicago 
     volumes:
       - /mnt/storage/share/audiobook:/audiobook
